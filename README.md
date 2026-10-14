@@ -1,5 +1,13 @@
 # OpenGL Starter
 
+## Assignment 2 — FUTURE ME
+
+The active CMake target now renders **Orbital Delivery**, an original GrabFood
+space courier scene. Start with [scene notes and controls](docs/FUTURE_ME.md).
+Source: `src/Assignment2_67050611.cpp`. Final 800 × 600 PNG and portable submission
+are in `captures/` and `submission/`. Original starter main and shaders are retained.
+The starter instructions below describe the original setup and triangle demo.
+
 [![Build](https://github.com/momotheoxy/OpenGLStarter/actions/workflows/build.yml/badge.svg)](https://github.com/momotheoxy/OpenGLStarter/actions/workflows/build.yml)
 
 A small **C++17 + OpenGL 3.3** starter project for students using **Windows, macOS, or Linux**.
@@ -483,3 +491,4 @@ Every push to `main` and every pull request is automatically **compiled** on:
 The workflow is stored in `.github/workflows/build.yml`. It builds the program but does not try to open the OpenGL window, because GitHub's build runners are used only to verify that the code and dependencies compile successfully.
 
 If the badge at the top of this README says **passing**, the current `main` branch has passed these cross-platform build checks.
+"# CG_final2" 
