@@ -1,0 +1,17 @@
+Assignment 2 — FUTURE ME: Orbital Delivery / 2086
+
+สมาชิกกลุ่ม
+1. [เติมชื่อ–นามสกุล] รหัสนักศึกษา 67050611
+2. [เติมชื่อ–นามสกุล] รหัสนักศึกษา 67050569
+
+แนวคิด: ในอนาคตฉันเป็นไรเดอร์ GrabFood ขับยานอวกาศไปส่งอาหารที่ Kepler Port 04 บนดาวปลายทาง โดยมียานสีเขียว ชุดอวกาศ กล่องเก็บอาหาร และเครื่องยนต์ไอพ่น
+
+Reference / แรงบันดาลใจ
+1. GrabFood Thailand: https://www.grab.com/th/en/food/
+   อ้างอิงชื่อบริการ แนวคิดการส่งอาหาร และเอกลักษณ์สีเขียว
+2. NASA Science — Cassini: Rings: https://science.nasa.gov/mission/cassini/science/rings/
+   อ้างอิงแนวภาพดาวมีวงแหวน ดาวในผลงานเป็นดาวสมมติ
+
+โมเดล OBJ สร้างขึ้นสำหรับงานนี้ด้วย vertices ไม่ได้ดาวน์โหลดโมเดลหรือภาพจากสองเว็บไซต์ข้างต้น ภาพสุดท้ายเรนเดอร์ด้วย Modern OpenGL 3.3 พร้อม GGX material shading, PCF shadow mapping, SSAO และ bloom ขนาด 800 × 600 pixels
+พัฒนาโมเดลและโค้ดโดยใช้ Codex ช่วยเหลือ
+

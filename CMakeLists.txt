@@ -76,6 +76,7 @@ find_package(OpenGL REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glew CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
+find_package(Stb REQUIRED)
 
 # Generate an absolute shader directory for this clone. The program can then
 # find shaders regardless of the working directory chosen by VS Code/VS/CMake.
@@ -87,13 +88,14 @@ configure_file(
 )
 
 add_executable(OpenGLStarter
-  src/main.cpp
+  src/Assignment2_67050611.cpp
   src/Libs/Mesh.cpp
   src/Libs/Shader.cpp
   src/Libs/Window.cpp
 )
 
 target_include_directories(OpenGLStarter PRIVATE
+  ${Stb_INCLUDE_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/src
   ${CMAKE_CURRENT_SOURCE_DIR}/src/Libs
   ${CMAKE_CURRENT_BINARY_DIR}/generated
@@ -110,3 +112,4 @@ if(APPLE)
   # OpenGL is deprecated by Apple but remains available (up to OpenGL 4.1).
   target_compile_definitions(OpenGLStarter PRIVATE GL_SILENCE_DEPRECATION)
 endif()
+
