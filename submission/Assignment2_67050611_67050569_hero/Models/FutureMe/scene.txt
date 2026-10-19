@@ -1,0 +1,16 @@
+dark.obj 0.018 0.03 0.045 0 0.75 0
+titanium.obj 0.35 0.39 0.41 0 0.95 6
+armorLight.obj 0.085 0.13 0.078 0 0.6 10
+armorDark.obj 0.022 0.042 0.031 0 0.65 10
+armor.obj 0.045 0.09 0.052 0 0.65 10
+rubber.obj 0.012 0.018 0.023 0 0.05 5
+screen.obj 0.06 0.55 0.65 0.5 0.2 8
+amber.obj 1 0.3 0.035 2 0.1 0
+metal.obj 0.24 0.32 0.37 0 0.85 0
+cyan.obj 0.07 0.48 1 5 0.1 0
+brass.obj 0.54 0.31 0.11 0 0.95 6
+white.obj 0.79 0.87 0.82 0 0.4 0
+label.obj 1 1 1 0 0.1 3
+eva.obj 0.55 0.51 0.41 0 0.05 11
+evaWhite.obj 0.72 0.71 0.63 0 0.12 11
+visorGold.obj 0.72 0.43 0.12 0 0.98 12

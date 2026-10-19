@@ -1,17 +1,21 @@
-Assignment 2 — FUTURE ME: Orbital Delivery / 2086
+Assignment 2 — FUTURE ME: Orbital Delivery / Rider Close-up
+
+ภาพล่าสุดเน้นเฉพาะคนขับและยาน Grab ระยะใกล้ ไม่มีดาว วงแหวน หรือก้อนหินในฉาก เครดิต cloud map และ NASA rings ด้านล่างเป็นของเวอร์ชันก่อนหน้าเท่านั้น ไม่ได้ใช้ในภาพส่งงานล่าสุด
 
 สมาชิกกลุ่ม
 1. [เติมชื่อ–นามสกุล] รหัสนักศึกษา 67050611
 2. [เติมชื่อ–นามสกุล] รหัสนักศึกษา 67050569
 
-แนวคิด: ในอนาคตฉันเป็นไรเดอร์ GrabFood ขับยานอวกาศไปส่งอาหารที่ Kepler Port 04 บนดาวปลายทาง โดยมียานสีเขียว ชุดอวกาศ กล่องเก็บอาหาร และเครื่องยนต์ไอพ่น
+แนวคิด: ในอนาคตเป็นไรเดอร์ Grab ขับยานไปส่งอาหารบนดาวที่อยู่อาศัยได้ โดยใช้แสง เงา และบรรยากาศภาพยนตร์อวกาศ ภาพส่งงานเรนเดอร์จาก C++ / Modern OpenGL 3.3 ขนาด 800 × 600
 
-Reference / แรงบันดาลใจ
-1. GrabFood Thailand: https://www.grab.com/th/en/food/
-   อ้างอิงชื่อบริการ แนวคิดการส่งอาหาร และเอกลักษณ์สีเขียว
-2. NASA Science — Cassini: Rings: https://science.nasa.gov/mission/cassini/science/rings/
-   อ้างอิงแนวภาพดาวมีวงแหวน ดาวในผลงานเป็นดาวสมมติ
+Reference และเครดิต asset
+1. Grab / GrabFood: https://www.grab.com/th/en/ และ https://www.grab.com/th/en/food/
+   ใช้ wordmark ทางการจาก https://www.grab.com/th/wp-content/themes/grabsg/public/img/grab_logo_158.png เป็น texture บนกล่องอาหาร โดย shader เปลี่ยนสีตาม alpha
+2. Earth Clouds — Solar System Scope / INOVE: https://www.solarsystemscope.com/textures/
+   ใช้ 8k_earth_clouds.jpg ภายใต้ CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+   ปรับการวางลองจิจูดและ contrast ด้วย shader บนดาวสมมติ
+3. NASA Cassini Rings: https://science.nasa.gov/mission/cassini/science/rings/ — แรงบันดาลใจดาววงแหวน
+4. Interstellar (2014) — แรงบันดาลใจด้านแสงและอารมณ์ภาพ ไม่ได้ใช้ภาพหรือโมเดลจากหนัง
+5. ภาพคอนเซปต์สร้างด้วย ImageGen จากพรอมป์ของกลุ่ม ใช้เป็นแนวทางการออกแบบ ไม่ได้ใช้แทนภาพเรนเดอร์ OpenGL
 
-โมเดล OBJ สร้างขึ้นสำหรับงานนี้ด้วย vertices ไม่ได้ดาวน์โหลดโมเดลหรือภาพจากสองเว็บไซต์ข้างต้น ภาพสุดท้ายเรนเดอร์ด้วย Modern OpenGL 3.3 พร้อม GGX material shading, PCF shadow mapping, SSAO และ bloom ขนาด 800 × 600 pixels
-พัฒนาโมเดลและโค้ดโดยใช้ Codex ช่วยเหลือ
-
+โมเดล OBJ สร้างด้วย vertices สำหรับงานนี้ พัฒนาโค้ดและโมเดลโดยใช้ Codex ช่วยเหลือ ระบบภาพใช้ GGX lighting, PCF shadow mapping, SSAO, HDR bloom และ ray-marched plasma

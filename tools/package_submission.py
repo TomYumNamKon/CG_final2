@@ -4,7 +4,7 @@ Run after generating assets and capturing the final image.
 from pathlib import Path
 import shutil,zipfile
 root=Path(__file__).resolve().parents[1]
-out=root/'submission/Assignment2_67050611_67050569'
+out=root/'submission/Assignment2_67050611_67050569_hero'
 out.mkdir(parents=True,exist_ok=True)
 source=(root/'src/Assignment2_67050611.cpp').read_text(encoding='utf-8')
 for lib in ['Mesh','Window']:
@@ -15,11 +15,19 @@ source=source.replace('#include "ProjectPaths.h"','')
 source=source.replace('fs::path(OPENGL_STARTER_SHADER_DIR).parent_path()','fs::path(__FILE__).parent_path()')
 (out/'Assignment2_67050611.cpp').write_text(source,encoding='utf-8')
 for folder in ['Models','Textures','Shaders']:
- shutil.copytree(root/folder/'FutureMe',out/folder/'FutureMe',dirs_exist_ok=True,ignore=shutil.ignore_patterns('*_v1.*'))
+ target=out/folder/'FutureMe';target.mkdir(parents=True,exist_ok=True)
+ if folder=='Models':
+  names=['scene.txt']+[line.split()[0] for line in (root/'Models/FutureMe/scene.txt').read_text().splitlines()]
+  for name in names:shutil.copy2(root/folder/'FutureMe'/name,target/name)
+ else:
+  shutil.copytree(root/folder/'FutureMe',target,dirs_exist_ok=True,ignore=shutil.ignore_patterns('*_v1.*','planet-clouds.jpg'))
 shutil.copy2(root/'captures/Assignment2_67050611_67050569.png',out)
 shutil.copy2(root/'docs/FUTURE_ME.md',out/'README.md')
 shutil.copy2(root/'docs/CLASSROOM_COMMENT.txt',out)
-shutil.copy2(root/'tools/generate_future_me.py',out/'generate_future_me.py')
+(out/'tools').mkdir(exist_ok=True)
+for script in ['generate_future_me.py','cinematic_scene.py']:
+ shutil.copy2(root/'tools'/script,out/'tools'/script)
+shutil.copy2(root/'docs/ASSET_CREDITS.md',out/'ASSET_CREDITS.md')
 shutil.copy2(root/'vcpkg.json',out)
 (out/'CMakeLists.txt').write_text('''cmake_minimum_required(VERSION 3.21)
 project(FutureMe LANGUAGES CXX)
